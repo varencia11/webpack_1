@@ -1,0 +1,165 @@
+.feedblock {
+    background-color: #FFFFFF;
+    margin-left: 32px;
+    max-width: 440px;
+    padding: 20px 32px 32px 32px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+}
+
+.crossbtn {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.cross {
+    position: absolute;
+    right: 455px;
+    top: 27px;
+}
+
+.feedback {
+    margin-left: 10px;
+   font-size: 24px; 
+   &::before {
+    content: "";
+    height: 37px;
+    left: 0px;
+    top: 31px;
+    padding: 0;
+    vertical-align: middle;
+    width: 4px;
+    background-color: #41F6D7;
+    position: absolute;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+   }
+}
+
+.show {
+    display: block !important; /* Включаем видимость меню */
+}
+
+.feedblock.show {
+    display: block; /* Показываем форму при наличии класса 'show' */
+    z-index: 102;
+    /* Возможно, добавить еще стили, чтобы блок был поверх остальных элементов */
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    color: #B5B6BC;
+    text-align: start;
+    width: 367px;
+    height: 48px;
+    margin-bottom: 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+
+    &:active {
+        border: 1px solid #FF3E79;
+    }
+}
+
+
+.msg {
+    height: 118px !important;
+}
+
+.data {
+    color: #B5B6BC;
+    width: 367px;
+    font-size: 14px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.send {
+    width: 136px;
+    height: 32px;
+    border-color: transparent;
+    background-color: #FF3E79;
+    border-radius: 20px;
+    margin-left: 226px;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+        filter: drop-shadow(4px 4px 12px #ff3e79);
+        transition: 1s;
+    }
+}
+
+
+
+.link {
+    cursor: pointer;
+    color: #FF3E79;
+}
+
+@media (max-width: 400px) {
+    .feedblock {
+        margin-left: 32px;
+        max-width: 320px;
+        padding: 20px 16px 32px 10px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+    }
+
+    .msg {
+        height: 118px !important;
+    }
+
+    .input {
+        color: #B5B6BC;
+        text-align: start;
+        width: 288px;
+        height: 48px;
+        margin-bottom: 16px;
+        border: 1px solid #EAEAEA;
+        border-radius: 8px;
+    
+        &:active {
+            border: 1px solid #FF3E79;
+        }
+    }
+
+    .data {
+        width: 100%;
+    }
+
+    .send {
+        margin-left: 147px;
+    }
+}
+
+@media (max-width: 319px) {
+
+     .feedblock {
+        padding: 0;
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .send {
+        margin-left: 80px;
+    }
+}
